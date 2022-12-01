@@ -1,3 +1,5 @@
+#!/bin/bash
+
 GREEN='\033[0;32m'
 NOCOLOUR='\033[0m'
 
