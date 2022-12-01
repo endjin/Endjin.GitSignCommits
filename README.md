@@ -12,4 +12,4 @@ Open Powershell and from the repository `Endjin.GitSignCommits` run the followin
 
 ## Notes
 
-The writing in <span style="color: green"> green </span> will guide you through the process 
+The writing in  **green** will guide you through the process 
