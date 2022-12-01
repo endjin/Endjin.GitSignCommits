@@ -1,1 +1,0 @@
-./gitsigning.sh
