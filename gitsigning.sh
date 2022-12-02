@@ -22,6 +22,7 @@ echo "Now copy this public key"
 echo "Go to settings in GitHub and click 'GPG and SSH Keys'"
 echo "Paste as a new GPG key"
 echo -e "--------${NOCOLOUR}"
+start https://github.com/settings/keys
 echo "Type any message below once you have set up your GPG key in Github to continue: "
 read message
 echo "Enter the user name you want to use to sign your commits:"
