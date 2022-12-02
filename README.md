@@ -1,6 +1,10 @@
 # Git Commit Signing 
 
-This shell script makes it easier to set up Git commit signing on Windows
+This shell script makes it easier to set up Git commit signing on Windows.
+
+By signing your commits, other contributors can see, using the verification button that it was you committing, and not someone pretending to be you.
+
+In GitHub under [Settings then SSH and GPG keys](https://github.com/settings/keys) you'll see a setting called **'Vigilant mode'** which flags unsigned commits as unverified. This means you can clearly see who is making verified commits and who isn't.
 
 ## Running the Script
 
@@ -11,6 +15,23 @@ Open Powershell and from the repository `Endjin.GitSignCommits` run the followin
 ```
 
 If you are on Windows, the script needs to run within Git Bash. 
+
+## Generating the Key
+
+The script will provide you with this information, however it's here below if you need it:
+
+- Select 1 for the first option
+- For key size enter 4096
+- For how long the key should last should be 0
+- And then verify by entering y
+
+Then you need to add your:
+- Name
+- Email address (the one that's verified that you'll push with)
+- A comment (you don't need to put one)
+- Enter "o" to confirm
+
+It will then ask you for a passphrase to protect the key. Make sure to remember it! It will ask you for this every time you commit. If you don't want a passkey then leave it blank.
 
 ## Linking to GitHub
 
