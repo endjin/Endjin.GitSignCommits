@@ -18,11 +18,6 @@ Now we need to link it to Github. To do this get the result of the armor command
 
 Go to settings in Github and then SSH and GPG Keys and create a new GPG Key. Insert the GPG key, including the lines that show the beginning and the end of the key block.
 
-Now we need to tell Git about the GPG signing key. Using your own GPG key ID instead of the example one, run the line below
-```
-$ git config --global user.signingkey 3AA5C34371567BD2
-```
-
 ## How to sign a commit 
 
 Now you should be able to stage and commit any change to GitHub, when you go to GitHub and you look at your commit you should see that it is now **verified**.
