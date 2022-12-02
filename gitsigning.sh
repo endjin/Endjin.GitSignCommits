@@ -25,10 +25,10 @@ echo "Type any message below once you have set up your GPG key in Github to cont
 read message
 echo "Enter the user name you want to use to sign your commits:"
 read username
-git config --global user.name $username
+git config --global user.name ${username}
 echo "Enter the user email you want to use to sign your commits:"
 read useremail
-git config --global user.email $useremail
-git config --global user.signingkey $KEYID
+git config --global user.email ${useremail}
+git config --global user.signingkey ${KEYID}
 git config --global commit.gpgsign true
 git config --global gpg.program gpg

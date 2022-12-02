@@ -10,6 +10,8 @@ Open Powershell and from the repository `Endjin.GitSignCommits` run the followin
 ./gitsigning.sh
 ```
 
+If you are on Windows, the script needs to run within Git Bash. 
+
 ## Notes
 
 The writing in  **green** will guide you through the process 
