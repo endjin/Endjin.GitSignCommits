@@ -16,7 +16,7 @@ If you are on Windows, the script needs to run within Git Bash.
 
 Now we need to link it to Github. To do this get the result of the armor command. Copy your GPG key, beginning with `-----BEGIN PGP PUBLIC KEY BLOCK-----` and ending with `-----END PGP PUBLIC KEY BLOCK-----`
 
-Go to settings in Github and then SSH and GPG Keys and create a new GPG Key. Insert the GPG key, including the lines that show the beginning and the end of the key block.
+Go to [settings in Github and then SSH and GPG Keys](https://github.com/settings/keys) and create a new GPG Key. Insert the GPG key, including the lines that show the beginning and the end of the key block.
 
 ## How to sign a commit 
 
