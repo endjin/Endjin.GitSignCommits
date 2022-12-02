@@ -11,7 +11,8 @@ echo "For how long the key should last should be 0"
 echo "And then verify by entering y"
 echo -e "--------${NOCOLOUR}"
 gpg --full-generate-key
-KEYID=$(gpg --list-secret-keys --keyid-format=long | grep -oP "(?<=\/)(.*?)(?= )" | head -1)
+DATENOW="$(date +'%Y-%m-%d')"
+KEYID=$(gpg --list-secret-keys --keyid-format=long | grep -oP "(?<=\/)(.*?)(?= ${DATENOW} \[SC])" | head -1)
 echo -e "${GREEN} This is your key ID: ${NOCOLOUR}"
 echo $KEYID
 gpg --armor --export $KEYID
