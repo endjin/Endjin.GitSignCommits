@@ -3,6 +3,8 @@
 GREEN='\033[0;32m'
 NOCOLOUR='\033[0m'
 
+# Generating a key
+
 echo -e "${GREEN}--------"
 echo "To generate a key using the default settings:" 
 echo "Select 1 for the first option"
@@ -11,12 +13,21 @@ echo "For how long the key should last should be 0"
 echo "And then verify by entering y"
 echo -e "--------${NOCOLOUR}"
 gpg --full-generate-key
+
+# Finding Key ID
+
 DATENOW="$(date +'%Y-%m-%d')"
 KEYID=$(gpg --list-secret-keys --keyid-format=long | grep -oP "(?<=\/)(.*?)(?= ${DATENOW} \[SC])" | head -1)
 echo -e "${GREEN} This is your key ID: ${NOCOLOUR}"
 echo $KEYID
+
+# Exporting Key ID
+
 gpg --armor --export $KEYID
 gpg --export --armor $KEYID > ./gpg-key.pub
+
+# Adding Public Key to GitHub
+
 echo -e "${GREEN}--------"
 echo "Now copy this public key"
 echo "Go to settings in GitHub and click 'GPG and SSH Keys'"
@@ -25,6 +36,9 @@ echo -e "--------${NOCOLOUR}"
 start https://github.com/settings/keys
 echo "Type any message below once you have set up your GPG key in Github to continue: "
 read message
+
+# Configuring settings for GPG Keys
+
 echo "Enter the user name you want to use to sign your commits:"
 read username
 git config --global user.name ${username}
