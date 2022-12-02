@@ -17,7 +17,7 @@ gpg --full-generate-key
 # Finding Key ID
 
 DATENOW="$(date +'%Y-%m-%d')"
-KEYID=$(gpg --list-secret-keys --keyid-format=long | grep -oP "(?<=\/)(.*?)(?= ${DATENOW} \[SC])" | head -1)
+KEYID=$(gpg --list-secret-keys --keyid-format=long | grep -oP "(?<=\/)(.*?)(?= ${DATENOW} \[SC])" | tail -1)
 echo -e "${GREEN} This is your key ID: ${NOCOLOUR}"
 echo $KEYID
 
