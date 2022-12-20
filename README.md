@@ -45,6 +45,13 @@ Now you should be able to stage and commit any change to GitHub, when you go to 
 
 ![Verified Image](README_images/Verified.png)
 
+## To cache your password
+
+```
+Set-Content -Path ~\.gnupg\gpg-agent.conf -Value "default-cache-ttl 3600$([System.Environment]::NewLine)max-cache-ttl 3600"
+```
+To cache your password so that you only need to enter it once every so often, run this command in Powershell. It will set up caching for your GPG key password, it'll save it for an hour. You can adjust the time by editing the `3600` to another value (measured in seconds).
+
 ## Notes
 
 The writing in  **green** will guide you through the process 
